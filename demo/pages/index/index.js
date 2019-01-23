@@ -12,6 +12,7 @@ Page({
     /* lifetime */
     onLoad() {
         // app.event.on('select-address', this.updateAddress1)
+        app.event.on('some-event', this.updateState, this)
     },
     onUnload() {
         app.event.off('select-address', this.updateAddress1)
@@ -28,6 +29,9 @@ Page({
         this.setData({
             address2: address,
         })
+    },
+    updateState() {
+        console.log('Update')
     },
 
     /* event */

@@ -6,9 +6,7 @@ Page({
     },
 
     // lifetime
-    onLoad: function () {
-        console.log(app.event)
-    },
+    onLoad: function () {},
 
     // event
     selectAddress(e) {

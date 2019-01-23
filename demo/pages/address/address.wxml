@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="list-item"
+        wx:for="{{ addressList }}"
+        wx:key="index"
+        data-address="{{ item }}"
+        bindtap="selectAddress">
+        {{ item }}
+    </view>
+</view>

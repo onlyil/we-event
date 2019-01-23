@@ -1,0 +1,8 @@
+.container {
+    padding: 0 30rpx;
+}
+.list-item {
+    height: 100rpx;
+    line-height: 100rpx;
+    border-bottom: 1rpx solid #eee;
+}

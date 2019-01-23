@@ -10,11 +10,13 @@
       <image src="http://h0.hucdn.com/open/201903/d644bc9481d770b5_36x36.png" style="width: 36rpx; height: 36rpx;"></image>
     </view>
   </view>
-  <button class="btn" type="primary" bindtap="registerListen1">注册事件监听1</button>
-  <button class="btn" type="warn" bindtap="removeListen1">移除事件监听1</button>
+  <button class="btn" type="primary" bindtap="registerListener1">注册事件监听1</button>
+  <button class="btn" type="warn" bindtap="removeListener1">移除事件监听1</button>
   <view class="info">
     <text>当前选择地址为: {{ address2 }}</text>
   </view>
-  <button class="btn" type="primary" bindtap="registerListen2">注册事件监听2</button>
-  <button class="btn" type="warn" bindtap="removeListen2">移除事件监听2</button>
+  <button class="btn" type="primary" bindtap="registerListener2">注册事件监听2</button>
+  <button class="btn" type="warn" bindtap="removeListener2">移除事件监听2</button>
+  <button class="btn" type="warn" bindtap="removeAllListeners">移除所有事件监听</button>
+  <button class="btn" bindtap="console">打印 we-event 实例的内部 events</button>
 </view>

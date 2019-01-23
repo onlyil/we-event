@@ -43,13 +43,8 @@ class WeEvent {
     emit(ev, ...args) {
         let events = this._events[ev]
 
-        if (!events) {
-            console.warn(`WeEvent Warn: No registered event ${ev}.`)
-            return
-        }
-
-        if (!events.length) {
-            console.warn(`WeEvent Warn: No listener of the event ${ev}.`)
+        if (!events || !events.length) {
+            console.warn(`WeEvent Warn: No registered listener of event '${ev}'.`)
             return
         }
 
@@ -73,12 +68,12 @@ class WeEvent {
         }
 
         if (!events) {
-            console.warn(`WeEvent Warn: No registered event ${ev}.`)
+            console.warn(`WeEvent Warn: No registered event '${ev}'.`)
             return
         }
 
         if (!events.length) {
-            console.warn(`WeEvent Warn: No listener of the event ${ev}.`)
+            console.warn(`WeEvent Warn: No listener of the event '${ev}'.`)
             return
         }
 

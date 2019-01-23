@@ -11,7 +11,7 @@ Page({
 
     /* lifetime */
     onLoad() {
-        app.event.on('select-address', this.updateAddress1)
+        // app.event.on('select-address', this.updateAddress1)
     },
     onUnload() {
         app.event.off('select-address', this.updateAddress1)
@@ -38,35 +38,47 @@ Page({
         })
     },
     // 注册事件监听1
-    registerListen1() {
+    registerListener1() {
         app.event.on('select-address', this.updateAddress1, this)
         wx.showToast({
-            title: '选择地址监听事件1已注册',
+            title: '监听事件1已注册',
             icon: 'none',
         })
     },
     // 移除事件监听1
-    removeListen1() {
+    removeListener1() {
         app.event.off('select-address', this.updateAddress1)
         wx.showToast({
-            title: '选择地址监听事件1已移除',
+            title: '监听事件1已移除',
             icon: 'none',
         })
     },
     // 注册事件监听2
-    registerListen2() {
+    registerListener2() {
         app.event.on('select-address', this.updateAddress2, this)
         wx.showToast({
-            title: '选择地址监听事件2已注册',
+            title: '监听事件2已注册',
             icon: 'none',
         })
     },
     // 移除事件监听2
-    removeListen2() {
+    removeListener2() {
         app.event.off('select-address', this.updateAddress2)
         wx.showToast({
-            title: '选择地址监听事件2已移除',
+            title: '监听事件2已移除',
             icon: 'none',
         })
+    },
+    // 移除所有事件监听
+    removeAllListeners() {
+        app.event.off('select-address')
+        wx.showToast({
+            title: '所有事件监听已移除',
+            icon: 'none',
+        })
+    },
+    
+    console() {
+        console.log(app.event._events)
     },
 })

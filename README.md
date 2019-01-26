@@ -69,3 +69,7 @@ Page({
 - event.emit(event, [...args])
   - `{string} event`
   - `{arguments list} [...args]`
+
+## Tip
+
+该模块使用了`ES6`语法，需配置环境支持

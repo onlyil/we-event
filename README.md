@@ -39,7 +39,7 @@ Page({
 
 ### 订阅事件
 
-使用 `on` 订阅事件，注意在 `onUnload` 中移除事件监听
+使用 `on` 订阅事件，注意在 `onUnload` 中移除事件监听
 
 ``` javascript
 const app = getApp()
@@ -62,7 +62,7 @@ Page({
 - event.on(event, callback, context)
   - `{sting} event`
   - `{Function} callback`
-  - `{object} context`  为当前页面 `page` 对象，传 `this`即可
+  - `{object} context` 为当前页面 `page` 对象，传 `this`即可
 - event.off([event, callback])
   - `{string} event`
   - `{Function} callback`

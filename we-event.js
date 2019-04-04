@@ -63,7 +63,7 @@ class WeEvent {
         let events = this._events[ev]
         // if only transfer ev, remove all listeners of this event
         if (arguments.length === 1) {
-            events = []
+            delete this._events[ev]
             return
         }
 

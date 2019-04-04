@@ -60,16 +60,20 @@ class WeEvent {
             return
         }
 
+        let events = this._events[ev]
         // if only transfer ev, remove all listeners of this event
         if (arguments.length === 1) {
             delete this._events[ev]
             return
         }
-        
-        let events = this._events[ev]
 
-        if (!events || !events.length) {
-            console.warn(`WeEvent Warn: No registered listener of event '${ev}'.`)
+        if (!events) {
+            console.warn(`WeEvent Warn: No registered event '${ev}'.`)
+            return
+        }
+
+        if (!events.length) {
+            console.warn(`WeEvent Warn: No listener of the event '${ev}'.`)
             return
         }
 

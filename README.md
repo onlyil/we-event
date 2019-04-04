@@ -7,7 +7,7 @@
 
 ### 引入模块
 
-在 `app.js` 中引入该模块，将其实例挂在 `app` 下
+在 `app.js` 中引入该模块，将实例挂在 `app` 下
 
 ``` javascript
 //app.js
